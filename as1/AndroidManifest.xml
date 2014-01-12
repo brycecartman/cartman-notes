@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.assignment1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.assignment1.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.assignment1.NewCounterActivity"
+            android:label="@string/title_activity_new_counter"
+            android:parentActivityName="com.example.assignment1.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.assignment1.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.assignment1.CounterStatusActivity"
+            android:label="@string/title_activity_counter_status"
+            android:parentActivityName="com.example.assignment1.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.Assignment1.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.assignment1.ViewCountersActivity"
+            android:label="@string/title_activity_view_counters"
+            android:parentActivityName="com.example.assignment1.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.assignment1.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.assignment1.CounterActivity"
+            android:label="@string/title_activity_counter"
+            android:parentActivityName="com.example.assignment1.NewCounterActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.assignment1.NewCounterActivity" />
+        </activity>
+    </application>
+
+</manifest>
