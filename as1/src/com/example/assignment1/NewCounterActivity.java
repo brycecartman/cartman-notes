@@ -11,8 +11,35 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
 
-public class NewCounterActivity extends Activity {
-	public static String counterName = "com.example.assignment1.MESSAGE";	
+public class NewCounterActivity extends Activity{
+	public static String counterName = "com.example.assignment1.MESSAGE";
+
+	// Creates a new instance of a counter.
+		public class counter {
+			
+			// Creates new instance of counter
+			public counter() {};
+			
+			private String name; // The name of the counter.
+			private int count; // The count of the counter.
+			private int isEmpty; // 
+			
+			// .setName(counterName) will set the counter's name.
+			public void setName(String counterName){
+					name = counterName;
+				}
+			// .count(countValue) will set/update the counter's value.
+			public void count(int countValue){
+				count = countValue;
+			}
+			
+			// .isEmpty will show if the counter space is taken or not.
+			public void isEmpty(int emptyValue){
+				isEmpty = emptyValue;
+			}	
+		}
+		
+		public static counter[] counters = new counter[50];  // Makes an array of 50 counters
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +87,22 @@ public class NewCounterActivity extends Activity {
 	public void counter(View view) {
         Intent intent = new Intent(this, CounterActivity.class);
         EditText editText = (EditText)findViewById(R.id.newCounter_message);
-        String message = editText.getText().toString();
-		intent.putExtra(counterName, message);
+        String message = editText.getText().toString(); // Message holds the name of the counter.
+		int arrayValue = 0; // Holds the value of the array.
+		
+		for(int i = 0; i<50; i++){
+		if(counters[i].isEmpty == 0){    // Checks to see if the counter is empty.
+			 counters[i].name = message; // Sets the counters name.
+			 counters[i].count = 0; // Set the counters default count to 0.
+			 intent.putExtra(counterName, message); // Makes the next page show the counter name.
+			 counters[i].isEmpty = 1; // Set the counter to being full ie: in use.
+		     arrayValue = i; // Gives the correct array location.
+			 
+		 }
+			 
+		}
+		
+		intent.putExtra("arrayValue", arrayValue); // Gives the arrayValue to the next activity.
         startActivity(intent);
     }
 

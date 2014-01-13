@@ -31,16 +31,16 @@ public class CounterActivity extends Activity implements OnClickListener {
 		String myCounterName = intent.getStringExtra(NewCounterActivity.counterName);
 		setTitle(myCounterName);
 		
+		// Gets the value of the clicker.
+		//int temp = intent.getIntExtra("arrayValue", 0);
+		
 		
 		// Stores the name of the clicker into shared preferences and commits.
 		SharedPreferences clickerData = getSharedPreferences("clickerData", MODE_WORLD_READABLE);
 		SharedPreferences.Editor clickerEdit;
 		clickerEdit = clickerData.edit();
-		
 		clickerEdit.putString("MYVALUE", myCounterName);
 		clickerEdit.commit();
-		
-		
 		
 		setContentView(R.layout.activity_counter);
 		// Show the Up button in the action bar.
@@ -95,8 +95,6 @@ public class CounterActivity extends Activity implements OnClickListener {
 	
 	// This function will increment the value, reset the counter or
 	// go home based on a onClick event occurring.
-	
-	
 	
 	
 	public void onClick(View v){
