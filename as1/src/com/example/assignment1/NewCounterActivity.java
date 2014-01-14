@@ -1,10 +1,15 @@
 package com.example.assignment1;
 
+import java.util.ArrayList;
+
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
@@ -13,38 +18,64 @@ import android.os.Build;
 
 public class NewCounterActivity extends Activity{
 	public static String counterName = "com.example.assignment1.MESSAGE";
-
-	// Creates a new instance of a counter.
-		public class counter {
+	private ArrayAdapter<counter> myAdapter;
+	
+	
+	// The counter class which holds all the counter functions + the list of counters.
+	public class counter{
+		
+	
+	    // Basic counter variables.
+		public String name; // The name of the counter.
+		public int count; // The count of the counter.
+		public int isEmpty; // 
 			
-			// Creates new instance of counter
-			public counter() {};
-			
-			private String name; // The name of the counter.
-			private int count; // The count of the counter.
-			private int isEmpty; // 
-			
-			// .setName(counterName) will set the counter's name.
-			public void setName(String counterName){
-					name = counterName;
-				}
-			// .count(countValue) will set/update the counter's value.
-			public void count(int countValue){
-				count = countValue;
+		// .setName(counterName) will set the counter's name.
+		public void setName(String counterName){
+				name = counterName;
 			}
+		// .count(countValue) will set/update the counter's value.
+		public void count(int countValue){
+			count = countValue;
+		}
 			
-			// .isEmpty will show if the counter space is taken or not.
-			public void isEmpty(int emptyValue){
-				isEmpty = emptyValue;
-			}	
+		// .isEmpty will show if the counter space is taken or not.
+		public void isEmpty(int emptyValue){
+			isEmpty = emptyValue;
 		}
 		
-		public static counter[] counters = new counter[50];  // Makes an array of 50 counters
+		// .getCounters() will be used to retrieve the counter array.
+		public ArrayList<counter> getCounters(){
+			return counters; // Returns the ArrayList<counter> counters
+		}
+	}
+		
 	
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_counter);
+		// This ArrayList will physically hold the counters.
+	    ArrayList<counter> counters = new ArrayList<counter>();
+	      
+		Intent intent = new Intent(this, CounterActivity.class);
+        EditText editText = (EditText)findViewById(R.id.newCounter_message);
+        String message = editText.getText().toString(); // Message holds the name of the counter.
+		int arrayValue = 0; // Holds the value of the array.
+		for(int i = 0; i < counters.size(); i++){
+		if(counters.get(i).isEmpty == 0){    // Checks to see if the counter is empty.
+			 counters.get(i).name = message; // Sets the counters name.
+			 counters.get(i).count = 0; // Set the counters default count to 0.
+			 counters.get(i).isEmpty = 1; // Set the counter to being full ie: in use.
+		     arrayValue = i; // Gives the correct array location.
+		 }
+		}
+		intent.putExtra("counterName", message); // Makes the next page show the counter name.
+		intent.putExtra("arrayValue", arrayValue); // Gives the arrayValue to the next activity.
+        startActivity(intent);
+    }
+
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
@@ -85,25 +116,8 @@ public class NewCounterActivity extends Activity{
 	
 	// Gets the name of the counter and goes to the new counter screen.
 	public void counter(View view) {
-        Intent intent = new Intent(this, CounterActivity.class);
-        EditText editText = (EditText)findViewById(R.id.newCounter_message);
-        String message = editText.getText().toString(); // Message holds the name of the counter.
-		int arrayValue = 0; // Holds the value of the array.
-		
-		for(int i = 0; i<50; i++){
-		if(counters[i].isEmpty == 0){    // Checks to see if the counter is empty.
-			 counters[i].name = message; // Sets the counters name.
-			 counters[i].count = 0; // Set the counters default count to 0.
-			 intent.putExtra(counterName, message); // Makes the next page show the counter name.
-			 counters[i].isEmpty = 1; // Set the counter to being full ie: in use.
-		     arrayValue = i; // Gives the correct array location.
-			 
-		 }
-			 
-		}
-		
-		intent.putExtra("arrayValue", arrayValue); // Gives the arrayValue to the next activity.
-        startActivity(intent);
-    }
-
+				
+        
+}
+	
 }

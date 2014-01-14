@@ -26,7 +26,7 @@ public class ViewCountersActivity extends Activity {
 		
 		// Show the Up button in the action bar.
 		setupActionBar();
-		
+	
 		LinearLayout viewCounters = (LinearLayout)findViewById(R.id.viewCounters);
 		ScrollView scrollCounters = new ScrollView(ViewCountersActivity.this);
 		LinearLayout viewCounters2 = new LinearLayout(ViewCountersActivity.this);

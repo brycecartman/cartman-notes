@@ -1,6 +1,11 @@
 package com.example.assignment1;
 
+import java.util.ArrayList;
+
+import com.example.assignment1.NewCounterActivity.counter;
+
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +25,11 @@ public class CounterActivity extends Activity implements OnClickListener {
 	Button resetBtn; // The button that resets the counter.
 	Button homeBtn; // The button that takes you to the app's home.
 	EditText counterBox; // The box containing counter text.
-	int counterValue = 0; // The default counter value.
+	
+	// Gets the value of the clicker.
+	Intent intent = getIntent();
+	int counterValue = intent.getIntExtra("arrayValue", 0);
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +39,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 		Intent intent = getIntent();
 		String myCounterName = intent.getStringExtra(NewCounterActivity.counterName);
 		setTitle(myCounterName);
-		
-		// Gets the value of the clicker.
-		//int temp = intent.getIntExtra("arrayValue", 0);
-		
+
 		
 		// Stores the name of the clicker into shared preferences and commits.
 		SharedPreferences clickerData = getSharedPreferences("clickerData", MODE_WORLD_READABLE);
