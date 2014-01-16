@@ -64,25 +64,17 @@ public class NewCounterActivity extends Activity {
 	// public static String counterName = "com.example.assignment1.MESSAGE";
 	// Gets the name of the counter and goes to the new counter screen.
 	public void counter(View view) {
-        Intent intent = new Intent(this, CounterActivity.class);
+		Intent intent = new Intent(this, CounterActivity.class);
         EditText editText = (EditText)findViewById(R.id.newCounter_message);
         
-       int arrayValue = counterFunctions.counters.size();
-        
-        // Find the next open counter spot. There are only 50 counters MAX.
-       /* for(int i = counterFunctions.counters.size(); i > 0; i--){
-    		if(counterFunctions.counters.get(i).isEmpty() == false){    // Checks to see if the counter is empty.
-    		     arrayValue = i; // Gives the correct array location.
-    		     break;
-    		 }
-    	}*/
+        int arrayValue = CounterFunctions.counters.size();
         
         // Gets the name of the counter and sends it to the CounterActivity.java activity.
         String message = editText.getText().toString();
         intent.putExtra("arrayValue", arrayValue);
 		intent.putExtra("counterName", message);
 		
-		counterFunctions.addCounter(message);
+		CounterFunctions.addCounter(message);
 		startActivity(intent);
     }
 

@@ -25,6 +25,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 	Button resetBtn; // The button that resets the counter.
 	Button homeBtn; // The button that takes you to the app's home.
 	Button renameBtn; // The button that renames the counter.
+	Button deleteBtn; // The button that deletes the counter.
 	EditText counterBox; // The box containing counter text.
 	
 	@Override
@@ -35,8 +36,8 @@ public class CounterActivity extends Activity implements OnClickListener {
 		Intent intent = getIntent();
 		int arrayValue = intent.getIntExtra("arrayValue", 0);
 
-		counterFunctions.setCounter(arrayValue); // Sets the counter.
-		setTitle(counterFunctions.getCurrentName()); // Sets the title name.
+		CounterFunctions.setCounter(arrayValue); // Sets the counter.
+		setTitle(CounterFunctions.getCurrentName()); // Sets the title name.
 		
 		
 		
@@ -48,15 +49,18 @@ public class CounterActivity extends Activity implements OnClickListener {
 		incrementBtn = (Button)findViewById(R.id.incrementCounter);
 		resetBtn = (Button)findViewById(R.id.resetCounter);
 		homeBtn = (Button)findViewById(R.id.homeButton);
+		deleteBtn = (Button)findViewById(R.id.deleteCounter);
 		counterBox = (EditText)findViewById(R.id.editText1);
 		renameBtn = (Button)findViewById(R.id.renameCounter);
 		
-		counterBox.setText(Integer.toString(counterFunctions.getCount()));
+		// Sets the count into the text box.
+		counterBox.setText(Integer.toString(CounterFunctions.getCount()));
 		
 		// Allows the buttons to be checked for a click event.
 		incrementBtn.setOnClickListener(this);
 		resetBtn.setOnClickListener(this);
 		renameBtn.setOnClickListener(this);
+		deleteBtn.setOnClickListener(this);
 		homeBtn.setOnClickListener(this);
 	}
 
@@ -99,13 +103,13 @@ public class CounterActivity extends Activity implements OnClickListener {
 	// go home based on a onClick event occurring.
 	public void onClick(View v){
 			if (v == incrementBtn){
-			counterFunctions.incrementCounter();
-			counterBox.setText(Integer.toString(counterFunctions.getCount()));
+			CounterFunctions.incrementCounter();
+			counterBox.setText(Integer.toString(CounterFunctions.getCount()));
 			}
 	
 		if (v == resetBtn){
-			counterFunctions.resetCounter();
-			counterBox.setText(Integer.toString(counterFunctions.getCount()));
+			CounterFunctions.resetCounter();
+			counterBox.setText(Integer.toString(CounterFunctions.getCount()));
 		}
 		
 		if (v == homeBtn){
@@ -115,6 +119,14 @@ public class CounterActivity extends Activity implements OnClickListener {
 		
 		if (v == renameBtn){
 			Intent intent = new Intent(this, RenameActivity.class);
+			startActivity(intent);
+		}
+		
+		if (v == deleteBtn){
+			Intent intent1 = getIntent();
+			int arrayValue = intent1.getIntExtra("arrayValue", 0);
+			CounterFunctions.counters.remove(arrayValue);
+			Intent intent = new Intent(this, MainActivity.class);
 			startActivity(intent);
 		}
 			

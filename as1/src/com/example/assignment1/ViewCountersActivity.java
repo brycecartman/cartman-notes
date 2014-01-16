@@ -47,18 +47,18 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 		// Basic loop that goes until there are no more counters.
 		// It will set up the button and add it into the layout.
 
-		for(int i = 0; i < counterFunctions.counters.size(); i++){
+		for(int i = 0; i < CounterFunctions.counters.size(); i++){
 			b[i] = new Button(this);
 			b[i].setOnClickListener(this);
 			b[i].setId(i);
 			LinearLayout.LayoutParams viewCounterParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
 			viewCounterParams.leftMargin = 20; // Margin from the left side.
 			viewCounterParams.rightMargin = 100; // Margin from the right side.
-			counterFunctions.setCounter(i);
-			b[i].setText(counterFunctions.getCurrentName()); // The button will be the clicker name.
+			CounterFunctions.setCounter(i);
+			b[i].setText(CounterFunctions.getCurrentName()); // The button will be the clicker name.
 			b[i].setLayoutParams(viewCounterParams); // Gives the parameters to the button.
 			viewCounters2.addView(b[i]); // Adds the button onto the layout.
-		}
+		    }
 		
 		scrollCounters.addView(viewCounters2); // Adds the buttons to scroll.
 		viewCounters.addView(scrollCounters); // Puts the scroll w/ buttons onto screen.
@@ -103,7 +103,7 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View view) {
-		for(int i = 0; i < counterFunctions.counters.size(); i++){
+		for(int i = 0; i < CounterFunctions.counters.size(); i++){
 			if(view.getId() == i){
 				Intent intent = new Intent(this, CounterActivity.class);
 				intent.putExtra("arrayValue", i);

@@ -5,24 +5,24 @@ import java.util.ArrayList;
 // This class will hold all the counter functions such as setting up the
 // counter, viewing it, modifying it, etc. This is a very important function.
 
-public class counterFunctions {
+public class CounterFunctions {
 
 	// This creates the ArrayList that will hold the "counters".
-	public static ArrayList<counterFunctions> counters = new ArrayList<counterFunctions>();
+	public static ArrayList<CounterFunctions> counters = new ArrayList<CounterFunctions>();
 	
 	private String name; // The name of the counter.
 	private int count; // The current count of the counter.
-	private static counterFunctions onCurrentCounter; // What counter am I on?
+	private static CounterFunctions onCurrentCounter; // What counter am I on?
 	
 	// This creates the counter with a given "counterName", default count (0).
-	public counterFunctions(String counterName){
+	public CounterFunctions(String counterName){
 		onCurrentCounter = null;
 		this.name = counterName;
 		this.count = 0;
 	}
 	
 	// Gets the counters' ArrayList.
-	public static ArrayList<counterFunctions> getCounters(){
+	public static ArrayList<CounterFunctions> getCounters(){
 		return counters;
 	}
 	
@@ -49,7 +49,7 @@ public class counterFunctions {
 	
 	// Create a new counter with the name "counterName".
 	public static void addCounter(String counterName){
-		counters.add(new counterFunctions(counterName));
+		counters.add(new CounterFunctions(counterName));
 	}
 	
 	// Returns the current value of count.
@@ -62,7 +62,7 @@ public class counterFunctions {
 		return onCurrentCounter.name();
 	}
 	
-	// Sets the counter to "null" making it default.
+	// Sets the counter to "null" making it deleted.
 	public static void deleteCounter(){
 		onCurrentCounter = null;
 	}
@@ -92,9 +92,9 @@ public class counterFunctions {
 	// Checks to see if the counter is empty or not. TRUE/FALSE notation.
 	public static boolean isEmpty(){
 		if(onCurrentCounter == null)
-			return true;
-		else{
 			return false;
+		else{
+			return true;
 		}
 		}
 	

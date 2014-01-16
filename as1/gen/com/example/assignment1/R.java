@@ -24,18 +24,20 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000c;
+        public static final int action_settings=0x7f08000e;
         public static final int deleteCounter=0x7f080006;
         public static final int editText1=0x7f080004;
         public static final int homeButton=0x7f080001;
         public static final int incrementCounter=0x7f080003;
         public static final int newCounterButton=0x7f080007;
         public static final int newCounter_message=0x7f080009;
+        public static final int renameButton=0x7f08000c;
         public static final int renameCounter=0x7f080005;
+        public static final int renameCounter_message=0x7f08000b;
         public static final int resetCounter=0x7f080002;
         public static final int statsCounter=0x7f080000;
         public static final int submitCounterButton=0x7f08000a;
-        public static final int viewCounters=0x7f08000b;
+        public static final int viewCounters=0x7f08000d;
         public static final int viewCountersButton=0x7f080008;
     }
     public static final class layout {
