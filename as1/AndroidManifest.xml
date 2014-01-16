@@ -54,6 +54,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.assignment1.NewCounterActivity" />
         </activity>
+        <activity
+            android:name="com.example.assignment1.RenameActivity"
+            android:label="@string/title_activity_rename" >
+        </activity>
     </application>
 
 </manifest>

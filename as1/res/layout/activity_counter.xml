@@ -9,26 +9,13 @@
     tools:context=".CounterActivity" >
 
     <Button
-        android:id="@+id/incrementCounter"
+        android:id="@+id/statsCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="26dp"
-        android:onClick="incrementCounter"
-        android:text="@string/incrementCounter_send" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="34dp"
-        android:layout_marginTop="103dp"
-        android:ems="10"
-        android:inputType="number" />
+        android:layout_alignLeft="@+id/homeButton"
+        android:layout_alignRight="@+id/resetCounter"
+        android:layout_below="@+id/resetCounter"
+        android:text="Stats" />
 
     <Button
         android:id="@+id/resetCounter"
@@ -37,8 +24,48 @@
         android:layout_alignLeft="@+id/incrementCounter"
         android:layout_alignRight="@+id/incrementCounter"
         android:layout_below="@+id/incrementCounter"
-        android:layout_marginTop="14dp"
         android:text="Reset" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/incrementCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:onClick="incrementCounter"
+        android:text="@string/incrementCounter_send" />
+
+    <Button
+        android:id="@+id/renameCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/statsCounter"
+        android:layout_alignRight="@+id/statsCounter"
+        android:layout_below="@+id/statsCounter"
+        android:text="Rename" />
+
+    <Button
+        android:id="@+id/deleteCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/homeButton"
+        android:layout_alignRight="@+id/renameCounter"
+        android:layout_below="@+id/renameCounter"
+        android:text="Delete" />
 
     <Button
         android:id="@+id/homeButton"
@@ -46,8 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/resetCounter"
         android:layout_alignRight="@+id/resetCounter"
-        android:layout_below="@+id/resetCounter"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/deleteCounter"
         android:text="Main Menu" />
 
 </RelativeLayout>

@@ -1,10 +1,14 @@
 package com.example.assignment1;
 
+import java.util.ArrayList;
+
 import android.R.layout;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -12,10 +16,11 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 
-public class ViewCountersActivity extends Activity {
+public class ViewCountersActivity extends Activity implements OnClickListener{
 	int total = 30; // Right Margin
 	Button[] b = new Button[50];
 	
@@ -26,7 +31,7 @@ public class ViewCountersActivity extends Activity {
 		
 		// Show the Up button in the action bar.
 		setupActionBar();
-	
+		
 		LinearLayout viewCounters = (LinearLayout)findViewById(R.id.viewCounters);
 		ScrollView scrollCounters = new ScrollView(ViewCountersActivity.this);
 		LinearLayout viewCounters2 = new LinearLayout(ViewCountersActivity.this);
@@ -41,20 +46,26 @@ public class ViewCountersActivity extends Activity {
 		
 		// Basic loop that goes until there are no more counters.
 		// It will set up the button and add it into the layout.
-		for(int i = 0; i < 15 ; i++){
+
+		for(int i = 0; i < counterFunctions.counters.size(); i++){
 			b[i] = new Button(this);
+			b[i].setOnClickListener(this);
+			b[i].setId(i);
 			LinearLayout.LayoutParams viewCounterParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
 			viewCounterParams.leftMargin = 20; // Margin from the left side.
 			viewCounterParams.rightMargin = 100; // Margin from the right side.
-			b[i].setText(clickerName); // The button will be the clicker name.
+			counterFunctions.setCounter(i);
+			b[i].setText(counterFunctions.getCurrentName()); // The button will be the clicker name.
 			b[i].setLayoutParams(viewCounterParams); // Gives the parameters to the button.
 			viewCounters2.addView(b[i]); // Adds the button onto the layout.
-		}	
-			
+		}
+		
 		scrollCounters.addView(viewCounters2); // Adds the buttons to scroll.
 		viewCounters.addView(scrollCounters); // Puts the scroll w/ buttons onto screen.
 		
+		
 	}
+	
 
 	/**
 	 * Set up the {@link android.app.ActionBar}, if the API is available.
@@ -89,5 +100,20 @@ public class ViewCountersActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	@Override
+	public void onClick(View view) {
+		for(int i = 0; i < counterFunctions.counters.size(); i++){
+			if(view.getId() == i){
+				Intent intent = new Intent(this, CounterActivity.class);
+				intent.putExtra("arrayValue", i);
+				startActivity(intent);
+			}
+				
+		}
+		
+	}
+
+
 
 }

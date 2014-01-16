@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	
     <string name="app_name">Assignment1 Counter</string>
     <string name="newCounterButton_send">New Counter</string>
     <string name="action_settings">Settings</string>
@@ -14,5 +13,7 @@
     <string name="title_activity_counter_status">Counter Status</string>
     <string name="title_activity_view_counters">Counters</string>
     <string name="title_activity_counter">Counter</string>
+    <string name="title_activity_rename">Rename Counter</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

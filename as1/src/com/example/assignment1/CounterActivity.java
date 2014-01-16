@@ -1,11 +1,11 @@
 package com.example.assignment1;
 
+// This file is used to increment, reset, view stats, delete and edit a counter.
+// It can also take you back to the home menu of the application.
+
 import java.util.ArrayList;
 
-import com.example.assignment1.NewCounterActivity.counter;
-
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,12 +24,8 @@ public class CounterActivity extends Activity implements OnClickListener {
 	Button incrementBtn; // The button that increments the counter.
 	Button resetBtn; // The button that resets the counter.
 	Button homeBtn; // The button that takes you to the app's home.
+	Button renameBtn; // The button that renames the counter.
 	EditText counterBox; // The box containing counter text.
-	
-	// Gets the value of the clicker.
-	Intent intent = getIntent();
-	int counterValue = intent.getIntExtra("arrayValue", 0);
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +33,12 @@ public class CounterActivity extends Activity implements OnClickListener {
 		
 		// Gets the name of the clicker and sets it as the title.
 		Intent intent = getIntent();
-		String myCounterName = intent.getStringExtra(NewCounterActivity.counterName);
-		setTitle(myCounterName);
+		int arrayValue = intent.getIntExtra("arrayValue", 0);
 
+		counterFunctions.setCounter(arrayValue); // Sets the counter.
+		setTitle(counterFunctions.getCurrentName()); // Sets the title name.
 		
-		// Stores the name of the clicker into shared preferences and commits.
-		SharedPreferences clickerData = getSharedPreferences("clickerData", MODE_WORLD_READABLE);
-		SharedPreferences.Editor clickerEdit;
-		clickerEdit = clickerData.edit();
-		clickerEdit.putString("MYVALUE", myCounterName);
-		clickerEdit.commit();
+		
 		
 		setContentView(R.layout.activity_counter);
 		// Show the Up button in the action bar.
@@ -57,10 +49,14 @@ public class CounterActivity extends Activity implements OnClickListener {
 		resetBtn = (Button)findViewById(R.id.resetCounter);
 		homeBtn = (Button)findViewById(R.id.homeButton);
 		counterBox = (EditText)findViewById(R.id.editText1);
+		renameBtn = (Button)findViewById(R.id.renameCounter);
+		
+		counterBox.setText(Integer.toString(counterFunctions.getCount()));
 		
 		// Allows the buttons to be checked for a click event.
 		incrementBtn.setOnClickListener(this);
 		resetBtn.setOnClickListener(this);
+		renameBtn.setOnClickListener(this);
 		homeBtn.setOnClickListener(this);
 	}
 
@@ -101,22 +97,25 @@ public class CounterActivity extends Activity implements OnClickListener {
 	
 	// This function will increment the value, reset the counter or
 	// go home based on a onClick event occurring.
-	
-	
 	public void onClick(View v){
-		if (v == incrementBtn){
-			counterValue = counterValue + 1;
-			counterBox.setText(Integer.toString(counterValue));
+			if (v == incrementBtn){
+			counterFunctions.incrementCounter();
+			counterBox.setText(Integer.toString(counterFunctions.getCount()));
 			}
-		
+	
 		if (v == resetBtn){
-			counterValue = 0;
-			counterBox.setText(Integer.toString(counterValue));
+			counterFunctions.resetCounter();
+			counterBox.setText(Integer.toString(counterFunctions.getCount()));
 		}
 		
 		if (v == homeBtn){
 			Intent intent = new Intent(this, MainActivity.class);
 	        startActivity(intent);
+		}
+		
+		if (v == renameBtn){
+			Intent intent = new Intent(this, RenameActivity.class);
+			startActivity(intent);
 		}
 			
 		}
