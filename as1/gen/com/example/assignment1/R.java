@@ -24,46 +24,50 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080013;
-        public static final int dayStats=0x7f08000e;
+        public static final int action_settings=0x7f080015;
+        public static final int dayStats=0x7f080010;
         public static final int deleteCounter=0x7f080006;
         public static final int editText1=0x7f080004;
         public static final int homeButton=0x7f080001;
-        public static final int hourStats=0x7f08000f;
+        public static final int hourStats=0x7f080011;
+        public static final int hourlyStats=0x7f080007;
         public static final int incrementCounter=0x7f080003;
-        public static final int monthStats=0x7f080011;
-        public static final int newCounterButton=0x7f080007;
-        public static final int newCounter_message=0x7f08000a;
-        public static final int renameButton=0x7f08000d;
+        public static final int monthStats=0x7f080013;
+        public static final int monthlyStats=0x7f08000b;
+        public static final int newCounterButton=0x7f080008;
+        public static final int newCounter_message=0x7f08000c;
+        public static final int renameButton=0x7f08000f;
         public static final int renameCounter=0x7f080005;
-        public static final int renameCounter_message=0x7f08000c;
+        public static final int renameCounter_message=0x7f08000e;
         public static final int resetCounter=0x7f080002;
-        public static final int sortCounters=0x7f080009;
+        public static final int sortCounters=0x7f08000a;
         public static final int statsCounter=0x7f080000;
-        public static final int submitCounterButton=0x7f08000b;
-        public static final int viewCounters=0x7f080012;
-        public static final int viewCountersButton=0x7f080008;
-        public static final int weekStats=0x7f080010;
+        public static final int submitCounterButton=0x7f08000d;
+        public static final int viewCounters=0x7f080014;
+        public static final int viewCountersButton=0x7f080009;
+        public static final int weekStats=0x7f080012;
     }
     public static final class layout {
         public static final int activity_counter=0x7f030000;
         public static final int activity_counter_status=0x7f030001;
         public static final int activity_hourly_stats=0x7f030002;
         public static final int activity_main=0x7f030003;
-        public static final int activity_new_counter=0x7f030004;
-        public static final int activity_rename=0x7f030005;
-        public static final int activity_stats_main=0x7f030006;
-        public static final int activity_view_counters=0x7f030007;
+        public static final int activity_monthly_stats=0x7f030004;
+        public static final int activity_new_counter=0x7f030005;
+        public static final int activity_rename=0x7f030006;
+        public static final int activity_stats_main=0x7f030007;
+        public static final int activity_view_counters=0x7f030008;
     }
     public static final class menu {
         public static final int counter=0x7f070000;
         public static final int counter_status=0x7f070001;
         public static final int hourly_stats=0x7f070002;
         public static final int main=0x7f070003;
-        public static final int new_counter=0x7f070004;
-        public static final int rename=0x7f070005;
-        public static final int stats_main=0x7f070006;
-        public static final int view_counters=0x7f070007;
+        public static final int monthly_stats=0x7f070004;
+        public static final int new_counter=0x7f070005;
+        public static final int rename=0x7f070006;
+        public static final int stats_main=0x7f070007;
+        public static final int view_counters=0x7f070008;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -77,6 +81,7 @@ public final class R {
         public static final int title_activity_counter_status=0x7f050009;
         public static final int title_activity_hourly_stats=0x7f05000f;
         public static final int title_activity_main=0x7f050003;
+        public static final int title_activity_monthly_stats=0x7f050010;
         public static final int title_activity_new_counter=0x7f050006;
         public static final int title_activity_rename=0x7f05000c;
         public static final int title_activity_stats_main=0x7f05000e;

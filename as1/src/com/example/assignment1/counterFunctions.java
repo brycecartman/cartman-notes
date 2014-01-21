@@ -25,14 +25,10 @@ public class CounterFunctions implements Serializable{
 			
 	private String name; // The name of the counter.
 	private int count; // The current count of the counter.
-	private static CounterFunctions onCurrentCounter; // What counter am I on?
-	private static CounterFunctions onCurrentHour;
-	private static CounterFunctions onCurrentDay;
-	private static CounterFunctions onCurrentWeek;
-	private static CounterFunctions onCurrentMonth;
+	private static CounterFunctions onCurrentCounter; // What counter am I on?	
 	
 	Date date = new Date();
-	Calendar calendar = Calendar.getInstance();
+	static Calendar calendar = Calendar.getInstance();
 	
 	private int[] hourlyCount = new int[24]; // 24 hours in a day count.
 	private int[] dailyCount = new int[31]; // 31 avg days in a month count.
@@ -55,6 +51,11 @@ public class CounterFunctions implements Serializable{
 	// Returns the current counter.s date
 	public static Date getDate(){
 		return onCurrentCounter.date;
+	}
+	
+	// Returns the current counter.s date
+	public static int[] getMonthlyStats(){
+		return onCurrentCounter.monthlyCount;
 	}
 	
 	// Sets the current counter's date.
@@ -152,12 +153,59 @@ public class CounterFunctions implements Serializable{
 		}		
 	}
 	
-	
+	// This function will deal with the monthly statistics for the counter.
+	public static void monthlyStats(){
+		
+		//January
+		if(calendar.get(calendar.MONTH) == 0){
+			onCurrentCounter.monthlyCount[0]++;
+		}
+		//February
+		if(calendar.get(calendar.MONTH) == 1){
+			onCurrentCounter.monthlyCount[1]++;
+		}
+		//March
+		if(calendar.get(calendar.MONTH) == 2){
+			onCurrentCounter.monthlyCount[2]++;
+		}
+		//April
+		if(calendar.get(calendar.MONTH) == 3){
+			onCurrentCounter.monthlyCount[3]++;
+		}
+		//May
+		if(calendar.get(calendar.MONTH) == 4){
+			onCurrentCounter.monthlyCount[4]++;
+		}
+		//June
+		if(calendar.get(calendar.MONTH) == 5){
+			onCurrentCounter.monthlyCount[5]++;
+		}
+		//July
+		if(calendar.get(calendar.MONTH) == 6){
+			onCurrentCounter.monthlyCount[6]++;
+		}
+		//August
+		if(calendar.get(calendar.MONTH) == 7){
+			onCurrentCounter.monthlyCount[7]++;
+		}
+		//September
+		if(calendar.get(calendar.MONTH) == 8){
+			onCurrentCounter.monthlyCount[8]++;
+		}
+		//October
+		if(calendar.get(calendar.MONTH) == 9){
+			onCurrentCounter.monthlyCount[9]++;
+		}
+		//November
+		if(calendar.get(calendar.MONTH) == 10){
+			onCurrentCounter.monthlyCount[10]++;
+		}
+		//December
+		if(calendar.get(calendar.MONTH) == 11){
+			onCurrentCounter.monthlyCount[11]++;
+		}
+	}
 
-	
-	
-	
-	
 	}
 
 

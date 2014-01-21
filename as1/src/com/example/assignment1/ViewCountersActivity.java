@@ -37,10 +37,7 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 		
 		
 		// Basic loop that goes until there are no more counters.
-		// It will set up the button and add it into the layout.
-		
-		
-				
+		// It will set up the button and add it into the layout.			
 		for(int i = 0; i < CounterFunctions.counters.size(); i++){
 			b[i] = new Button(this);
 			b[i].setOnClickListener(this);
@@ -53,11 +50,9 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 			b[i].setLayoutParams(viewCounterParams); // Gives the parameters to the button.
 			viewCounters2.addView(b[i]); // Adds the button onto the layout.
 		    }
-		
-		
+	
 		scrollCounters.addView(viewCounters2); // Adds the buttons to scroll.
-		viewCounters.addView(scrollCounters); // Puts the scroll w/ buttons onto screen.
-		
+		viewCounters.addView(scrollCounters); // Puts the scroll w/ buttons onto screen.	
 		
 	}
 	
@@ -96,6 +91,7 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 		return super.onOptionsItemSelected(item);
 	}
 
+	// The function will go to the correct counter increment page when clicked.
 	@Override
 	public void onClick(View view) {
 		for(int i = 0; i < CounterFunctions.counters.size(); i++){
@@ -104,11 +100,7 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 				intent.putExtra("arrayValue", i);
 				startActivity(intent);
 			}
-				
-		}
-		
-		
-		
+		}		
 	}
 	
 

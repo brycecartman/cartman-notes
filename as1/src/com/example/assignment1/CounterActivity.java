@@ -106,6 +106,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 			CounterFunctions.incrementCounter();
 			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			counterBox.setText(Integer.toString(CounterFunctions.getCount()));
+			CounterFunctions.monthlyStats(); // Figures out the monthly statistics.
 			}
 	
 		if (v == resetBtn){
@@ -115,6 +116,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 		}
 		if (v == statsBtn){
 			Intent intent = new Intent(this, StatsMain.class);
+			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			startActivity(intent);
 		}
 		
@@ -138,6 +140,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 		}
 			
 		}
+
 	}
 
 

@@ -31,6 +31,8 @@ public class RenameActivity extends Activity {
         String message = editText.getText().toString();
 
         CounterFunctions.setName(message);
+        
+        CounterFunctions.saveCounters(getBaseContext()); // Save File
         	
 		startActivity(intent);
 	}

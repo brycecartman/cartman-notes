@@ -66,6 +66,10 @@
             android:name="com.example.assignment1.HourlyStats"
             android:label="@string/title_activity_hourly_stats" >
         </activity>
+        <activity
+            android:name="com.example.assignment1.MonthlyStats"
+            android:label="@string/title_activity_monthly_stats" >
+        </activity>
     </application>
 
 </manifest>

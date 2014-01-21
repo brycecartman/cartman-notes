@@ -17,5 +17,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_stats_main">Statistics</string>
     <string name="title_activity_hourly_stats">Hourly Stats</string>
+    <string name="title_activity_monthly_stats">Monthly Stats</string>
 
 </resources>
