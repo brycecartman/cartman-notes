@@ -15,5 +15,7 @@
     <string name="title_activity_counter">Counter</string>
     <string name="title_activity_rename">Rename Counter</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_stats_main">Statistics</string>
+    <string name="title_activity_hourly_stats">Hourly Stats</string>
 
 </resources>

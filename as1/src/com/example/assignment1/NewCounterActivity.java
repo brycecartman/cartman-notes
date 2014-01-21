@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
@@ -65,7 +64,7 @@ public class NewCounterActivity extends Activity {
 	// Gets the name of the counter and goes to the new counter screen.
 	public void counter(View view) {
 		Intent intent = new Intent(this, CounterActivity.class);
-        EditText editText = (EditText)findViewById(R.id.newCounter_message);
+        EditText editText = (EditText)findViewById(R.id.newCounter_message);     
         
         int arrayValue = CounterFunctions.counters.size();
         
@@ -74,7 +73,10 @@ public class NewCounterActivity extends Activity {
         intent.putExtra("arrayValue", arrayValue);
 		intent.putExtra("counterName", message);
 		
-		CounterFunctions.addCounter(message);
+		CounterFunctions.addCounter(message); // Creates a new counter w/ name.
+		
+		CounterFunctions.saveCounters(getBaseContext()); // Save File
+		
 		startActivity(intent);
     }
 

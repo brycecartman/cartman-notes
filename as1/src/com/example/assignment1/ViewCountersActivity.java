@@ -1,8 +1,7 @@
 package com.example.assignment1;
 
-import java.util.ArrayList;
+import java.util.Collections;
 
-import android.R.layout;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -12,23 +11,21 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Build;
 
 public class ViewCountersActivity extends Activity implements OnClickListener{
 	int total = 30; // Right Margin
-	Button[] b = new Button[50];
+	Button[] b = new Button[100];
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view_counters);
-		
+	
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
@@ -38,15 +35,12 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 		
 		viewCounters2.setOrientation(LinearLayout.VERTICAL);
 		
-		// Lists the data from the clickerNames.
-		SharedPreferences clickerData;
-		clickerData = getSharedPreferences("clickerData", MODE_WORLD_READABLE);
-		String clickerName = clickerData.getString("MYVALUE", "");
-				
 		
 		// Basic loop that goes until there are no more counters.
 		// It will set up the button and add it into the layout.
-
+		
+		
+				
 		for(int i = 0; i < CounterFunctions.counters.size(); i++){
 			b[i] = new Button(this);
 			b[i].setOnClickListener(this);
@@ -59,6 +53,7 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 			b[i].setLayoutParams(viewCounterParams); // Gives the parameters to the button.
 			viewCounters2.addView(b[i]); // Adds the button onto the layout.
 		    }
+		
 		
 		scrollCounters.addView(viewCounters2); // Adds the buttons to scroll.
 		viewCounters.addView(scrollCounters); // Puts the scroll w/ buttons onto screen.
@@ -112,8 +107,10 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 				
 		}
 		
+		
+		
 	}
-
+	
 
 
 }

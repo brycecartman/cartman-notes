@@ -3,8 +3,6 @@ package com.example.assignment1;
 // This file is used to increment, reset, view stats, delete and edit a counter.
 // It can also take you back to the home menu of the application.
 
-import java.util.ArrayList;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -16,7 +14,6 @@ import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Build;
 
 public class CounterActivity extends Activity implements OnClickListener {
@@ -24,6 +21,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 	Button incrementBtn; // The button that increments the counter.
 	Button resetBtn; // The button that resets the counter.
 	Button homeBtn; // The button that takes you to the app's home.
+	Button statsBtn; // The button that takes you to the app's main stats page.
 	Button renameBtn; // The button that renames the counter.
 	Button deleteBtn; // The button that deletes the counter.
 	EditText counterBox; // The box containing counter text.
@@ -49,6 +47,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 		incrementBtn = (Button)findViewById(R.id.incrementCounter);
 		resetBtn = (Button)findViewById(R.id.resetCounter);
 		homeBtn = (Button)findViewById(R.id.homeButton);
+		statsBtn = (Button)findViewById(R.id.statsCounter);
 		deleteBtn = (Button)findViewById(R.id.deleteCounter);
 		counterBox = (EditText)findViewById(R.id.editText1);
 		renameBtn = (Button)findViewById(R.id.renameCounter);
@@ -60,6 +59,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 		incrementBtn.setOnClickListener(this);
 		resetBtn.setOnClickListener(this);
 		renameBtn.setOnClickListener(this);
+		statsBtn.setOnClickListener(this);
 		deleteBtn.setOnClickListener(this);
 		homeBtn.setOnClickListener(this);
 	}
@@ -104,12 +104,18 @@ public class CounterActivity extends Activity implements OnClickListener {
 	public void onClick(View v){
 			if (v == incrementBtn){
 			CounterFunctions.incrementCounter();
+			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			counterBox.setText(Integer.toString(CounterFunctions.getCount()));
 			}
 	
 		if (v == resetBtn){
 			CounterFunctions.resetCounter();
+			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			counterBox.setText(Integer.toString(CounterFunctions.getCount()));
+		}
+		if (v == statsBtn){
+			Intent intent = new Intent(this, StatsMain.class);
+			startActivity(intent);
 		}
 		
 		if (v == homeBtn){
@@ -126,6 +132,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 			Intent intent1 = getIntent();
 			int arrayValue = intent1.getIntExtra("arrayValue", 0);
 			CounterFunctions.counters.remove(arrayValue);
+			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			Intent intent = new Intent(this, MainActivity.class);
 			startActivity(intent);
 		}

@@ -1,18 +1,44 @@
 package com.example.assignment1;
-
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+
+import android.content.Context;
 
 // This class will hold all the counter functions such as setting up the
 // counter, viewing it, modifying it, etc. This is a very important function.
 
-public class CounterFunctions {
+// James Hodgson gave me the idea of using ArrayList and moving some of my functions
+// as I was using a fixed array[] at first to hold the data and it had a long list
+// of problems. After studying ArrayList I finally fixed my previous errors. Thanks.
+
+public class CounterFunctions implements Serializable{
 
 	// This creates the ArrayList that will hold the "counters".
 	public static ArrayList<CounterFunctions> counters = new ArrayList<CounterFunctions>();
-	
+			
 	private String name; // The name of the counter.
 	private int count; // The current count of the counter.
 	private static CounterFunctions onCurrentCounter; // What counter am I on?
+	private static CounterFunctions onCurrentHour;
+	private static CounterFunctions onCurrentDay;
+	private static CounterFunctions onCurrentWeek;
+	private static CounterFunctions onCurrentMonth;
+	
+	Date date = new Date();
+	Calendar calendar = Calendar.getInstance();
+	
+	private int[] hourlyCount = new int[24]; // 24 hours in a day count.
+	private int[] dailyCount = new int[31]; // 31 avg days in a month count.
+	private int[] weeklyCount = new int[4]; // 4 avg weeks in a month count.
+	private int[] monthlyCount = new int[12]; // 12 months in a year count.
+	
 	
 	// This creates the counter with a given "counterName", default count (0).
 	public CounterFunctions(String counterName){
@@ -20,17 +46,26 @@ public class CounterFunctions {
 		this.name = counterName;
 		this.count = 0;
 	}
-	
-	// Gets the counters' ArrayList.
+
+	// Gets the counters' ArrayList. For saving and restoring the counter.
 	public static ArrayList<CounterFunctions> getCounters(){
 		return counters;
+	}
+	
+	// Returns the current counter.s date
+	public static Date getDate(){
+		return onCurrentCounter.date;
+	}
+	
+	// Sets the current counter's date.
+	public void setDate(Date date){
+		onCurrentCounter.date = date;
 	}
 	
 	// Returns the count of the counter.
 	private int count(){
 		return this.count;
 	}
-	
 
 	// Returns the name of the counter.
 	public String name(){
@@ -43,9 +78,9 @@ public class CounterFunctions {
 	}
 	
 	// Resets the counter.
-		private void resetCurrentCounter(){
+	private void resetCurrentCounter(){
 			this.count = 0;
-		}
+	}
 	
 	// Create a new counter with the name "counterName".
 	public static void addCounter(String counterName){
@@ -88,15 +123,40 @@ public class CounterFunctions {
 		onCurrentCounter.name = newName;
 	}
 	
+	// Saves the counter ArrayList file into "file.txt".
+	public static void saveCounters(Context context){
+		FileOutputStream fileOut;
+		try {
+			fileOut = context.openFileOutput("file.txt", Context.MODE_PRIVATE);
+			ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
+			objOut.writeObject(counters);
+			objOut.close();
+		}catch (Exception e){
+			e.printStackTrace();
+		}		
+	}
 	
-	// Checks to see if the counter is empty or not. TRUE/FALSE notation.
-	public static boolean isEmpty(){
-		if(onCurrentCounter == null)
-			return false;
-		else{
-			return true;
-		}
-		}
+	// Restores the counter ArrayList file from "file.txt".
+	@SuppressWarnings("unchecked")
+	public static void restoreCounters(Context context){
+		FileInputStream fileIn;
+		try {
+			fileIn = context.openFileInput("file.txt");
+			ObjectInputStream objIn = new ObjectInputStream(fileIn);
+			counters = (ArrayList<CounterFunctions>) objIn.readObject();
+			objIn.close();
+		}catch (FileNotFoundException e){
+			return;
+		}catch (Exception e){
+			e.printStackTrace();
+		}		
+	}
+	
+	
+
+	
+	
+	
 	
 	}
 

@@ -58,6 +58,14 @@
             android:name="com.example.assignment1.RenameActivity"
             android:label="@string/title_activity_rename" >
         </activity>
+        <activity
+            android:name="com.example.assignment1.StatsMain"
+            android:label="@string/title_activity_stats_main" >
+        </activity>
+        <activity
+            android:name="com.example.assignment1.HourlyStats"
+            android:label="@string/title_activity_hourly_stats" >
+        </activity>
     </application>
 
 </manifest>

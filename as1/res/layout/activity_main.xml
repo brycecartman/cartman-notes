@@ -28,4 +28,11 @@
     android:text="@string/viewCountersButton_send"
     android:onClick="viewCounters" />
 
+<Button
+    android:id="@+id/sortCounters"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:onClick="sortCounters"
+    android:text="Sort Counters" />
+
 </LinearLayout>

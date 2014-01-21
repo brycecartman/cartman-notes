@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".StatsMain" >
+
+    <Button
+        android:id="@+id/dayStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hourStats"
+        android:layout_below="@+id/hourStats"
+        android:text="Daily Statistics" />
+
+    <Button
+        android:id="@+id/weekStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dayStats"
+        android:layout_below="@+id/dayStats"
+        android:text="Weekly Statistics" />
+
+    <Button
+        android:id="@+id/monthStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weekStats"
+        android:layout_below="@+id/weekStats"
+        android:text="Monthly Statistics" />
+
+    <Button
+        android:id="@+id/hourStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="127dp"
+        android:text="Hourly Statistics" />
+
+</RelativeLayout>
