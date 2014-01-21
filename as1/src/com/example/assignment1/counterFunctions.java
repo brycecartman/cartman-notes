@@ -32,7 +32,7 @@ public class CounterFunctions implements Serializable{
 	
 	private int[] hourlyCount = new int[24]; // 24 hours in a day count.
 	private int[] dailyCount = new int[31]; // 31 avg days in a month count.
-	private int[] weeklyCount = new int[4]; // 4 avg weeks in a month count.
+	private int[][] weeklyCount = new int[5][12]; // 5 avg weeks in a month count plus months.
 	private int[] monthlyCount = new int[12]; // 12 months in a year count.
 	
 	
@@ -53,9 +53,14 @@ public class CounterFunctions implements Serializable{
 		return onCurrentCounter.date;
 	}
 	
-	// Returns the current counter.s date
+	// Returns the monthly statistics.
 	public static int[] getMonthlyStats(){
 		return onCurrentCounter.monthlyCount;
+	}
+	
+	// Returns the weekly statistics.
+	public static int[][] getWeeklyStats(){
+		return onCurrentCounter.weeklyCount;
 	}
 	
 	// Sets the current counter's date.
@@ -81,6 +86,10 @@ public class CounterFunctions implements Serializable{
 	// Resets the counter.
 	private void resetCurrentCounter(){
 			this.count = 0;
+			this.monthlyCount = null;
+			this.weeklyCount = null;
+			this.dailyCount = null;
+			this.hourlyCount = null;
 	}
 	
 	// Create a new counter with the name "counterName".
@@ -205,8 +214,171 @@ public class CounterFunctions implements Serializable{
 			onCurrentCounter.monthlyCount[11]++;
 		}
 	}
+	
+	
+	// This function will deal with the weeky statistics for the counter.
+	public static void weeklyStats(){
+			
+		//January
+		if(calendar.get(calendar.MONTH) == 0){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][0]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][0]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][0]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][0]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][0]++;
+		}
+		//February
+		if(calendar.get(calendar.MONTH) == 1){
 
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][1]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][1]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][1]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][1]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][1]++;
+		}
+		//March
+		if(calendar.get(calendar.MONTH) == 2){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][2]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][2]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][2]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][2]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][2]++;
+		}
+		//April
+		if(calendar.get(calendar.MONTH) == 3){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][3]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][3]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][3]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][3]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][3]++;
+		}
+		//May
+		if(calendar.get(calendar.MONTH) == 4){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][4]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][4]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][4]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][4]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][4]++;
+		}
+		//June
+		if(calendar.get(calendar.MONTH) == 5){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][5]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][5]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][5]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][5]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][5]++;
+		}
+		//July
+		if(calendar.get(calendar.MONTH) == 6){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][6]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][6]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][6]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][6]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][6]++;
+		}
+		//August
+		if(calendar.get(calendar.MONTH) == 7){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][7]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][7]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][7]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][7]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][7]++;
+		}
+		//September
+		if(calendar.get(calendar.MONTH) == 8){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][8]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][8]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][8]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][8]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][8]++;
+		}
+		//October
+		if(calendar.get(calendar.MONTH) == 9){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][9]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][9]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][9]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][9]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][9]++;
+		}
+		//November
+		if(calendar.get(calendar.MONTH) == 10){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][10]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][10]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][10]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][10]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][10]++;
+		}
+		//December
+		if(calendar.get(calendar.MONTH) == 11){
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 1)
+				onCurrentCounter.weeklyCount[0][11]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 2)
+				onCurrentCounter.weeklyCount[1][11]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 3)
+				onCurrentCounter.weeklyCount[2][11]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 4)
+				onCurrentCounter.weeklyCount[3][11]++;
+			if(calendar.get(calendar.WEEK_OF_MONTH) == 5)
+				onCurrentCounter.weeklyCount[4][11]++;
+		}
 	}
+
+}
 
 
 

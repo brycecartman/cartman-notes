@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;

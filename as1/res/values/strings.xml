@@ -18,5 +18,6 @@
     <string name="title_activity_stats_main">Statistics</string>
     <string name="title_activity_hourly_stats">Hourly Stats</string>
     <string name="title_activity_monthly_stats">Monthly Stats</string>
+    <string name="title_activity_weekly_stats">Weekly Stats</string>
 
 </resources>

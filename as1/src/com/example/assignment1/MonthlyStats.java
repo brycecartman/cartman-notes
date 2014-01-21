@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+// This class displays the month/count data onto the screen.
+
 public class MonthlyStats extends Activity {
 
 	// Array of 12 monthly statistics.

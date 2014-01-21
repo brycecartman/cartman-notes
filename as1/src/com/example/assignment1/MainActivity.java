@@ -1,27 +1,25 @@
 package com.example.assignment1;
 
-import java.util.Collections;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 
-//This is the main activity window. It has two options, to go to the create counter
-//menu or to view current counters.
+//This is the main activity window. It has three options, to go to the create counter
+//menu, view counters or to sort the counters before displaying them on view counters.
+
 public class MainActivity extends Activity {
 
 			
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         
        // Restores the counters ArrayList file from "file.txt".
        CounterFunctions.restoreCounters(getBaseContext());

@@ -1,7 +1,5 @@
 package com.example.assignment1;
 
-import java.util.Collections;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -16,6 +14,8 @@ import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
+
+// This class lists dynamic buttons for each counter.
 
 public class ViewCountersActivity extends Activity implements OnClickListener{
 	int total = 30; // Right Margin

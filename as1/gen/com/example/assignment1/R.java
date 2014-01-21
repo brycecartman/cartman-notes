@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080015;
+        public static final int action_settings=0x7f080016;
         public static final int dayStats=0x7f080010;
         public static final int deleteCounter=0x7f080006;
         public static final int editText1=0x7f080004;
@@ -46,6 +46,7 @@ public final class R {
         public static final int viewCounters=0x7f080014;
         public static final int viewCountersButton=0x7f080009;
         public static final int weekStats=0x7f080012;
+        public static final int weeklyStats=0x7f080015;
     }
     public static final class layout {
         public static final int activity_counter=0x7f030000;
@@ -57,6 +58,7 @@ public final class R {
         public static final int activity_rename=0x7f030006;
         public static final int activity_stats_main=0x7f030007;
         public static final int activity_view_counters=0x7f030008;
+        public static final int activity_weekly_stats=0x7f030009;
     }
     public static final class menu {
         public static final int counter=0x7f070000;
@@ -68,6 +70,7 @@ public final class R {
         public static final int rename=0x7f070006;
         public static final int stats_main=0x7f070007;
         public static final int view_counters=0x7f070008;
+        public static final int weekly_stats=0x7f070009;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -86,6 +89,7 @@ public final class R {
         public static final int title_activity_rename=0x7f05000c;
         public static final int title_activity_stats_main=0x7f05000e;
         public static final int title_activity_view_counters=0x7f05000a;
+        public static final int title_activity_weekly_stats=0x7f050011;
         public static final int viewCountersButton_send=0x7f050004;
     }
     public static final class style {

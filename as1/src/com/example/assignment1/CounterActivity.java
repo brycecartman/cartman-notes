@@ -1,6 +1,6 @@
 package com.example.assignment1;
 
-// This file is used to increment, reset, view stats, delete and edit a counter.
+// This file is used to increment, reset, view statistics, delete and edit a counter.
 // It can also take you back to the home menu of the application.
 
 import android.os.Bundle;
@@ -107,6 +107,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			counterBox.setText(Integer.toString(CounterFunctions.getCount()));
 			CounterFunctions.monthlyStats(); // Figures out the monthly statistics.
+			CounterFunctions.weeklyStats(); // Figures out the weekly statistics.
 			}
 	
 		if (v == resetBtn){
@@ -122,6 +123,7 @@ public class CounterActivity extends Activity implements OnClickListener {
 		
 		if (v == homeBtn){
 			Intent intent = new Intent(this, MainActivity.class);
+			CounterFunctions.saveCounters(getBaseContext()); // Save File
 	        startActivity(intent);
 		}
 		

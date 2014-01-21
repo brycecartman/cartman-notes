@@ -8,9 +8,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+// This class controls the 4 stats buttons.
+
 public class StatsMain extends Activity implements OnClickListener {
 	Button hourlyStatsBtn; // The button that goes to HourlyStats.
 	Button monthlyStatsBtn; // The button that goes to MonthlyStats.
+	Button weeklyStatsBtn; // The button that goes to WeeklyStats.
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -19,10 +22,12 @@ public class StatsMain extends Activity implements OnClickListener {
 		// Assigns the buttons and text box their proper item via ID.
 		hourlyStatsBtn = (Button)findViewById(R.id.hourStats);
 		monthlyStatsBtn = (Button)findViewById(R.id.monthStats);
+		weeklyStatsBtn = (Button)findViewById(R.id.weekStats);
 		
 		// Allows the buttons to be checked for a click event.
 		hourlyStatsBtn.setOnClickListener(this);
 		monthlyStatsBtn.setOnClickListener(this);
+		weeklyStatsBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -33,6 +38,7 @@ public class StatsMain extends Activity implements OnClickListener {
 	}
 	
 	
+	// If a button is clicked, react.
 	public void onClick(View v){
 	
 	if (v == hourlyStatsBtn){
@@ -41,6 +47,10 @@ public class StatsMain extends Activity implements OnClickListener {
 	}
 	if (v == monthlyStatsBtn){
 		Intent intent = new Intent(this, MonthlyStats.class);
+		startActivity(intent);
+	}
+	if (v == weeklyStatsBtn){
+		Intent intent = new Intent(this, WeeklyStats.class);
 		startActivity(intent);
 	}
 		
