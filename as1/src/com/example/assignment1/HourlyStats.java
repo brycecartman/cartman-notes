@@ -41,31 +41,60 @@ public class HourlyStats extends Activity {
 					
 				if(hourlyData[i][x][c] != 0){
 					
+					if(c < 12){		// AM COUNT	
 					if(i == 0)
-						HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 1)
-						HourlyStatsText[i][x][c].setText("Feb " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Feb " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 2)
-						HourlyStatsText[i][x][c].setText("Mar " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Mar " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 3)
-						HourlyStatsText[i][x][c].setText("Apr " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Apr " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 4)
-						HourlyStatsText[i][x][c].setText("May " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("May " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 5)
-						HourlyStatsText[i][x][c].setText("Jun " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Jun " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 6)
-						HourlyStatsText[i][x][c].setText("Jul " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Jul " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 7)
-						HourlyStatsText[i][x][c].setText("Aug " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Aug " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 8)
-						HourlyStatsText[i][x][c].setText("Sep " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Sep " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 9)
-						HourlyStatsText[i][x][c].setText("Oct " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Oct " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 10)
-						HourlyStatsText[i][x][c].setText("Nov " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Nov " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 11)
-						HourlyStatsText[i][x][c].setText("Dec " + x + " " + c + " -- " + hourlyData[i][x][c]);
+						HourlyStatsText[i][x][c].setText("Dec " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					}
+					if(c >= 12){		// PM COUNT	
+						if(i == 0)
+							HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 1)
+							HourlyStatsText[i][x][c].setText("Feb " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 2)
+							HourlyStatsText[i][x][c].setText("Mar " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 3)
+							HourlyStatsText[i][x][c].setText("Apr " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 4)
+							HourlyStatsText[i][x][c].setText("May " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 5)
+							HourlyStatsText[i][x][c].setText("Jun " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 6)
+							HourlyStatsText[i][x][c].setText("Jul " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 7)
+							HourlyStatsText[i][x][c].setText("Aug " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 8)
+							HourlyStatsText[i][x][c].setText("Sep " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 9)
+							HourlyStatsText[i][x][c].setText("Oct " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 10)
+							HourlyStatsText[i][x][c].setText("Nov " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						if(i == 11)
+							HourlyStatsText[i][x][c].setText("Dec " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
+						}
+					
+				}
 					
 				if(hourlyData[i][x][c] != 0){
 				HourlyStatsText[i][x][c].setLayoutParams(viewHourlyParams); // Gives the parameters to the text.

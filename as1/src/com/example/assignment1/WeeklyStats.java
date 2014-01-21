@@ -16,6 +16,7 @@ public class WeeklyStats extends Activity {
 	// Array of 5 weekly statistics.
 	TextView[][] weeklyStatsText = new TextView[5][12];
 		
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
