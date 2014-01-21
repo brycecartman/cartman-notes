@@ -27,13 +27,16 @@ public class MonthlyStats extends Activity {
 	
 		viewMonthlyStats2.setOrientation(LinearLayout.VERTICAL);		
 		int monthlyData[] = CounterFunctions.getMonthlyStats();
+		LinearLayout.LayoutParams viewMonthlyParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
 		
 		// Basic loop that goes until there are no more text to display.
 		// It will set up the text and add it into the layout.
 		for(int i = 0; i < 12; i++){
+			
+			if(monthlyData[i] != 0){
 			MonthlyStatsText[i] = new TextView(this);
 			MonthlyStatsText[i].setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-			LinearLayout.LayoutParams viewHourlyParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
+			}
 			
 			if(monthlyData[i] != 0){
 				if(i == 0)
@@ -61,9 +64,10 @@ public class MonthlyStats extends Activity {
 				if(i == 11)
 				MonthlyStatsText[i].setText("Month of Dec -- " + monthlyData[11]);
 			}
-			
-			MonthlyStatsText[i].setLayoutParams(viewHourlyParams); // Gives the parameters to the text.
+			if(monthlyData[i] != 0){
+			MonthlyStatsText[i].setLayoutParams(viewMonthlyParams); // Gives the parameters to the text.
 			viewMonthlyStats2.addView(MonthlyStatsText[i]); // Adds the text onto the layout.
+			}
 		    }
 		
 		scrollMonthlyStats.addView(viewMonthlyStats2); // Adds the text to scroll.

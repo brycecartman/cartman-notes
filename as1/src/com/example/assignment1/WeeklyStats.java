@@ -2,6 +2,7 @@ package com.example.assignment1;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 public class WeeklyStats extends Activity {
 	
-	// Array of 4 weekly statistics.
+	// Array of 5 weekly statistics.
 	TextView[][] weeklyStatsText = new TextView[5][12];
 		
 	@Override
@@ -26,14 +27,18 @@ public class WeeklyStats extends Activity {
 	
 		viewWeeklyStats2.setOrientation(LinearLayout.VERTICAL);		
 		int weeklyData[][] = CounterFunctions.getWeeklyStats();
+		LinearLayout.LayoutParams viewWeeklyParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
 		
 		// Basic loop that goes until there are no more text to display.
 		// It will set up the text and add it into the layout.
 		for(int i = 0; i < 12; i++){
 			for(int w = 0; w < 5; w++){
+				
+				if(weeklyData[w][i] != 0){
 				weeklyStatsText[w][i] = new TextView(this);
-				//weeklyStatsText[w][i].setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-				LinearLayout.LayoutParams viewWeeklyParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
+				weeklyStatsText[w][i].setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+				}
+				
 				if(weeklyData[w][i] != 0){
 					if(w == 0){
 						if(i == 0)
@@ -166,9 +171,10 @@ public class WeeklyStats extends Activity {
 							weeklyStatsText[w][i].setText("Week 5 of Dec --  " + weeklyData[4][11]);
 					}
 				}
-			
+				if(weeklyData[w][i] != 0){
 				weeklyStatsText[w][i].setLayoutParams(viewWeeklyParams); // Gives the parameters to the text.
 				viewWeeklyStats2.addView(weeklyStatsText[w][i]); // Adds the text onto the layout.
+				}
 		    }
 		}
 		

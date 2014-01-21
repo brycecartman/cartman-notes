@@ -74,6 +74,10 @@
             android:name="com.example.assignment1.WeeklyStats"
             android:label="@string/title_activity_weekly_stats" >
         </activity>
+        <activity
+            android:name="com.example.assignment1.DailyStats"
+            android:label="@string/title_activity_daily_stats" >
+        </activity>
     </application>
 
 </manifest>

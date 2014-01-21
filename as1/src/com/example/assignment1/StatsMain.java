@@ -14,6 +14,7 @@ public class StatsMain extends Activity implements OnClickListener {
 	Button hourlyStatsBtn; // The button that goes to HourlyStats.
 	Button monthlyStatsBtn; // The button that goes to MonthlyStats.
 	Button weeklyStatsBtn; // The button that goes to WeeklyStats.
+	Button dailyStatsBtn; // The button that goes to DailyStats.
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,11 +24,13 @@ public class StatsMain extends Activity implements OnClickListener {
 		hourlyStatsBtn = (Button)findViewById(R.id.hourStats);
 		monthlyStatsBtn = (Button)findViewById(R.id.monthStats);
 		weeklyStatsBtn = (Button)findViewById(R.id.weekStats);
+		dailyStatsBtn = (Button)findViewById(R.id.dayStats);
 		
 		// Allows the buttons to be checked for a click event.
 		hourlyStatsBtn.setOnClickListener(this);
 		monthlyStatsBtn.setOnClickListener(this);
 		weeklyStatsBtn.setOnClickListener(this);
+		dailyStatsBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -51,6 +54,10 @@ public class StatsMain extends Activity implements OnClickListener {
 	}
 	if (v == weeklyStatsBtn){
 		Intent intent = new Intent(this, WeeklyStats.class);
+		startActivity(intent);
+	}
+	if (v == dailyStatsBtn){
+		Intent intent = new Intent(this, DailyStats.class);
 		startActivity(intent);
 	}
 		

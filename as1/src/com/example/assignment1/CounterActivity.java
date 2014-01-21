@@ -104,10 +104,12 @@ public class CounterActivity extends Activity implements OnClickListener {
 	public void onClick(View v){
 			if (v == incrementBtn){
 			CounterFunctions.incrementCounter();
-			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			counterBox.setText(Integer.toString(CounterFunctions.getCount()));
 			CounterFunctions.monthlyStats(); // Figures out the monthly statistics.
 			CounterFunctions.weeklyStats(); // Figures out the weekly statistics.
+			CounterFunctions.dailyStats(); // Figures out the daily statistics.
+			CounterFunctions.hourlyStats(); // Figures out the hourly statistics.
+			CounterFunctions.saveCounters(getBaseContext()); // Save File
 			}
 	
 		if (v == resetBtn){

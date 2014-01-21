@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 public class HourlyStats extends Activity {
 
-	// Array of 500 hour statistics.
-	TextView[] HourlyStatsText = new TextView[100];
+	// Array of hourly statistics.
+	TextView[][][] HourlyStatsText = new TextView[12][32][25];
 			
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +25,59 @@ public class HourlyStats extends Activity {
 		
 		viewHourlyStats2.setOrientation(LinearLayout.VERTICAL);		
 		
+		int hourlyData[][][] = CounterFunctions.getHourlyStats();
+		LinearLayout.LayoutParams viewHourlyParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
 		
 		// Basic loop that goes until there are no more text to display.
 		// It will set up the text and add it into the layout.
-		for(int i = 0; i < 100; i++){
-			HourlyStatsText[i] = new TextView(this);
-			HourlyStatsText[i].setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-			LinearLayout.LayoutParams viewHourlyParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
-			//viewHourlyParams.leftMargin = 20; // Margin from the left side.
-			//viewHourlyParams.rightMargin = 100; // Margin from the right side.
-			HourlyStatsText[i].setText("hi"); // The text will be the statistic.
-			HourlyStatsText[i].setLayoutParams(viewHourlyParams); // Gives the parameters to the text.
-			viewHourlyStats2.addView(HourlyStatsText[i]); // Adds the text onto the layout.
-		    }
-		
-		scrollHourlyStats.addView(viewHourlyStats2); // Adds the text to scroll.
-		viewHourlyStats.addView(scrollHourlyStats); // Puts the scroll w/ text onto screen.	
-		
-	}
+		for(int i = 0; i < 12; i++){
+			for(int x = 1; x < 32; x++){
+				for(int c = 1; c < 25; c++){
+						
+					if(hourlyData[i][x][c] != 0){
+					HourlyStatsText[i][x][c] = new TextView(this);
+					HourlyStatsText[i][x][c].setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+					}
+					
+				if(hourlyData[i][x][c] != 0){
+					
+					if(i == 0)
+						HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 1)
+						HourlyStatsText[i][x][c].setText("Feb " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 2)
+						HourlyStatsText[i][x][c].setText("Mar " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 3)
+						HourlyStatsText[i][x][c].setText("Apr " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 4)
+						HourlyStatsText[i][x][c].setText("May " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 5)
+						HourlyStatsText[i][x][c].setText("Jun " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 6)
+						HourlyStatsText[i][x][c].setText("Jul " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 7)
+						HourlyStatsText[i][x][c].setText("Aug " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 8)
+						HourlyStatsText[i][x][c].setText("Sep " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 9)
+						HourlyStatsText[i][x][c].setText("Oct " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 10)
+						HourlyStatsText[i][x][c].setText("Nov " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					if(i == 11)
+						HourlyStatsText[i][x][c].setText("Dec " + x + " " + c + " -- " + hourlyData[i][x][c]);
+					}
+					
+				if(hourlyData[i][x][c] != 0){
+				HourlyStatsText[i][x][c].setLayoutParams(viewHourlyParams); // Gives the parameters to the text.
+				viewHourlyStats2.addView(HourlyStatsText[i][x][c]); // Adds the text onto the layout.
+					}
+				}
+			}
+		}
+	scrollHourlyStats.addView(viewHourlyStats2); // Adds the text to scroll.
+	viewHourlyStats.addView(scrollHourlyStats); // Puts the scroll w/ text onto screen.	
+	CounterFunctions.saveCounters(getBaseContext()); // Save File
+}
 	
 
 	@Override
