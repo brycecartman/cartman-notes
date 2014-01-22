@@ -22,6 +22,7 @@ limitations under the License.
 Credits/Acknowledgements:
   
   Online Resources:
+  
     Android Documentation: http://developer.android.com/guide/index.html
     
     Vogel, Lars. Android Development Tutorial: http://www.vogella.com/tutorials/Android/article.html
