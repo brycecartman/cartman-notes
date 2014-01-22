@@ -32,8 +32,7 @@ public class HourlyStats extends Activity {
 		// It will set up the text and add it into the layout.
 		for(int i = 0; i < 12; i++){
 			for(int x = 1; x < 32; x++){
-				for(int c = 1; c < 25; c++){
-						
+				for(int c = 1; c < 25; c++){	
 					if(hourlyData[i][x][c] != 0){
 					HourlyStatsText[i][x][c] = new TextView(this);
 					HourlyStatsText[i][x][c].setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
@@ -41,7 +40,7 @@ public class HourlyStats extends Activity {
 					
 				if(hourlyData[i][x][c] != 0){
 					
-					if(c >= 0 || c < 12){		// AM COUNT	
+					if(c >= 0 && c <= 11){		// AM COUNT	
 					if(i == 0)
 						HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 1)
@@ -67,7 +66,7 @@ public class HourlyStats extends Activity {
 					if(i == 11)
 						HourlyStatsText[i][x][c].setText("Dec " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					}
-					if(c >= 12 || c < 0){		// PM COUNT	
+					if(c >= 12 && c <= 24){		// PM COUNT	
 						if(i == 0)
 							HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
 						if(i == 1)
