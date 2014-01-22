@@ -41,7 +41,7 @@ public class HourlyStats extends Activity {
 					
 				if(hourlyData[i][x][c] != 0){
 					
-					if(c < 12){		// AM COUNT	
+					if(c >= 0 || c < 12){		// AM COUNT	
 					if(i == 0)
 						HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					if(i == 1)
@@ -67,7 +67,7 @@ public class HourlyStats extends Activity {
 					if(i == 11)
 						HourlyStatsText[i][x][c].setText("Dec " + x + " " + c + ":00AM -- " + hourlyData[i][x][c]);
 					}
-					if(c >= 12){		// PM COUNT	
+					if(c >= 12 || c < 0){		// PM COUNT	
 						if(i == 0)
 							HourlyStatsText[i][x][c].setText("Jan " + x + " " + c + ":00PM -- " + hourlyData[i][x][c]);
 						if(i == 1)
