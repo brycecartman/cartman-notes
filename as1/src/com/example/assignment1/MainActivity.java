@@ -1,8 +1,5 @@
 package com.example.assignment1;
 
-import java.util.Calendar;
-import java.util.TimeZone;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -18,8 +15,7 @@ public class MainActivity extends Activity {
 			
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
+        super.onCreate(savedInstanceState);        
         
        // Restores the counters ArrayList file from "file.txt".
        CounterFunctions.restoreCounters(getBaseContext());
@@ -35,21 +31,16 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    // Deals with the newCounter button.
     public void newCounter(View view) {
     	 Intent intent = new Intent(this, NewCounterActivity.class);
          startActivity(intent);
     }
     
-    
+    // Deals with the viewCounters button.
     public void viewCounters(View view) {
     	Intent intent = new Intent(this, ViewCountersActivity.class);
         startActivity(intent);
     }
-    
-    
-    public void sortCounters(View view) {
-    	
-    }
-    
-    
+  
 }

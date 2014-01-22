@@ -18,9 +18,8 @@ import android.os.Build;
 // This class lists dynamic buttons for each counter.
 
 public class ViewCountersActivity extends Activity implements OnClickListener{
-	int total = 30; // Right Margin
 	Button[] b = new Button[100];
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,25 +34,23 @@ public class ViewCountersActivity extends Activity implements OnClickListener{
 		
 		viewCounters2.setOrientation(LinearLayout.VERTICAL);
 		
-		
+		LinearLayout.LayoutParams viewCounterParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
 		// Basic loop that goes until there are no more counters.
-		// It will set up the button and add it into the layout.			
+		// It will set up the button and add it into the layout.
+		CounterFunctions.sort(); // Calls the sort function to sort the ArrayList.
 		for(int i = 0; i < CounterFunctions.counters.size(); i++){
 			b[i] = new Button(this);
 			b[i].setOnClickListener(this);
 			b[i].setId(i);
-			LinearLayout.LayoutParams viewCounterParams = new LinearLayout.LayoutParams((int)LayoutParams.MATCH_PARENT, (int)LayoutParams.MATCH_PARENT);
-			viewCounterParams.leftMargin = 20; // Margin from the left side.
-			viewCounterParams.rightMargin = 100; // Margin from the right side.
-			CounterFunctions.setCounter(i);
+			
+			CounterFunctions.setCounter(i); // Sets the current counter.
 			b[i].setText(CounterFunctions.getCurrentName()); // The button will be the clicker name.
 			b[i].setLayoutParams(viewCounterParams); // Gives the parameters to the button.
 			viewCounters2.addView(b[i]); // Adds the button onto the layout.
-		    }
-	
+		}
+
 		scrollCounters.addView(viewCounters2); // Adds the buttons to scroll.
 		viewCounters.addView(scrollCounters); // Puts the scroll w/ buttons onto screen.	
-		
 	}
 	
 
