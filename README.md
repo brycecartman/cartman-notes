@@ -33,10 +33,13 @@ Credits/Acknowledgements:
     eClass CMPUT 301 LEC Notes/Powerpoints
     
   Textbook Resources:
+  
     Liang, Daniel Y. "Introduction to Java Programming", Sixth Edition
+    
     Old GPRC course notes
     
   In-Class Assistance:
+  
     Hodgson, James: Helped me with the ArrayList when I had brief problems
     
 Program Description:
