@@ -23,8 +23,11 @@ Credits/Acknowledgements:
   
   Online Resources:
     Android Documentation: http://developer.android.com/guide/index.html
+    
     Vogel, Lars. Android Development Tutorial: http://www.vogella.com/tutorials/Android/article.html
+    
     Javarevisted: http://javarevisited.blogspot.ca/2011/05/example-of-arraylist-in-java-tutorial.html
+    
     eClass CMPUT 301 LAB Notes/Powerpoints
     eClass CMPUT 301 LEC Notes/Powerpoints
     
