@@ -14,6 +14,10 @@ import android.widget.TextView;
 public class MonthlyStats extends Activity {
 
 	// Array of 12 monthly statistics.
+	/**
+	 * @uml.property  name="monthlyStatsText"
+	 * @uml.associationEnd  multiplicity="(0 -1)"
+	 */
 	TextView[] MonthlyStatsText = new TextView[12];
 	
 	@Override

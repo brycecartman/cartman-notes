@@ -18,6 +18,10 @@ import android.os.Build;
 // This class lists dynamic buttons for each counter.
 
 public class ViewCountersActivity extends Activity implements OnClickListener{
+	/**
+	 * @uml.property  name="b"
+	 * @uml.associationEnd  multiplicity="(0 -1)"
+	 */
 	Button[] b = new Button[100];
 
 	@Override

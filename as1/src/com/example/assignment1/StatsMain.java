@@ -11,9 +11,25 @@ import android.widget.Button;
 // This class controls the 4 stats buttons.
 
 public class StatsMain extends Activity implements OnClickListener {
+	/**
+	 * @uml.property  name="hourlyStatsBtn"
+	 * @uml.associationEnd  
+	 */
 	Button hourlyStatsBtn; // The button that goes to HourlyStats.
+	/**
+	 * @uml.property  name="monthlyStatsBtn"
+	 * @uml.associationEnd  
+	 */
 	Button monthlyStatsBtn; // The button that goes to MonthlyStats.
+	/**
+	 * @uml.property  name="weeklyStatsBtn"
+	 * @uml.associationEnd  
+	 */
 	Button weeklyStatsBtn; // The button that goes to WeeklyStats.
+	/**
+	 * @uml.property  name="dailyStatsBtn"
+	 * @uml.associationEnd  
+	 */
 	Button dailyStatsBtn; // The button that goes to DailyStats.
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

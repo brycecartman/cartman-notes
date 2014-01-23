@@ -23,16 +23,38 @@ public class CounterFunctions implements Serializable{
 	// This creates the ArrayList that will hold the "counters".
 	public static ArrayList<CounterFunctions> counters = new ArrayList<CounterFunctions>();
 			
+	/**
+	 * @uml.property  name="name"
+	 */
 	private String name; // The name of the counter.
+	/**
+	 * @uml.property  name="count"
+	 * @uml.associationEnd  multiplicity="(0 -1)" elementType="java.util.ArrayList"
+	 */
 	private int count; // The current count of the counter.
 	private static CounterFunctions onCurrentCounter; // What counter am I on?	
 	
+	/**
+	 * @uml.property  name="date"
+	 */
 	Date date = new Date();
 	static Calendar calendar = Calendar.getInstance();
 	
+	/**
+	 * @uml.property  name="hourlyCount" multiplicity="(0 -1)" dimension="3"
+	 */
 	private int[][][] hourlyCount = new int[12][32][25]; // Hourly count per month and day.
+	/**
+	 * @uml.property  name="dailyCount" multiplicity="(0 -1)" dimension="2"
+	 */
 	private int[][] dailyCount = new int[12][32]; // 12 months and 31 average days.
+	/**
+	 * @uml.property  name="weeklyCount" multiplicity="(0 -1)" dimension="2"
+	 */
 	private int[][] weeklyCount = new int[5][12]; // 5 average weeks in a month count plus months.
+	/**
+	 * @uml.property  name="monthlyCount" multiplicity="(0 -1)" dimension="1"
+	 */
 	private int[] monthlyCount = new int[12]; // 12 months in a year count.
 	
 	
@@ -49,6 +71,10 @@ public class CounterFunctions implements Serializable{
 	}
 	
 	// Returns the current counter.s date
+	/**
+	 * @return
+	 * @uml.property  name="date"
+	 */
 	public static Date getDate(){
 		return onCurrentCounter.date;
 	}
@@ -74,6 +100,10 @@ public class CounterFunctions implements Serializable{
 	}
 	
 	// Sets the current counter's date.
+	/**
+	 * @param date
+	 * @uml.property  name="date"
+	 */
 	public void setDate(Date date){
 		onCurrentCounter.date = date;
 	}
@@ -139,6 +169,10 @@ public class CounterFunctions implements Serializable{
 	}
 	
 	// Renames the counter
+	/**
+	 * @param newName
+	 * @uml.property  name="name"
+	 */
 	public static void setName(String newName){
 		onCurrentCounter.name = newName;
 	}

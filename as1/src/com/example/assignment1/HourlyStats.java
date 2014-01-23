@@ -12,6 +12,9 @@ import android.widget.TextView;
 public class HourlyStats extends Activity {
 
 	// Array of hourly statistics.
+	/**
+	 * @uml.property  name="hourlyStatsText" multiplicity="(0 -1)" dimension="3"
+	 */
 	TextView[][][] HourlyStatsText = new TextView[12][32][25];
 			
 	@Override

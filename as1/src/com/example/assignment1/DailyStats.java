@@ -12,6 +12,9 @@ import android.widget.TextView;
 public class DailyStats extends Activity {
 
 	// Array of 12 months and 31 days.
+	/**
+	 * @uml.property  name="dailyStatsText" multiplicity="(0 -1)" dimension="2"
+	 */
 	TextView[][] DailyStatsText = new TextView[12][32];
 	
 	@Override

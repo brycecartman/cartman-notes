@@ -18,12 +18,40 @@ import android.os.Build;
 
 public class CounterActivity extends Activity implements OnClickListener {
 
+	/**
+	 * @uml.property  name="incrementBtn"
+	 * @uml.associationEnd  
+	 */
 	Button incrementBtn; // The button that increments the counter.
+	/**
+	 * @uml.property  name="resetBtn"
+	 * @uml.associationEnd  
+	 */
 	Button resetBtn; // The button that resets the counter.
+	/**
+	 * @uml.property  name="homeBtn"
+	 * @uml.associationEnd  
+	 */
 	Button homeBtn; // The button that takes you to the app's home.
+	/**
+	 * @uml.property  name="statsBtn"
+	 * @uml.associationEnd  
+	 */
 	Button statsBtn; // The button that takes you to the app's main stats page.
+	/**
+	 * @uml.property  name="renameBtn"
+	 * @uml.associationEnd  
+	 */
 	Button renameBtn; // The button that renames the counter.
+	/**
+	 * @uml.property  name="deleteBtn"
+	 * @uml.associationEnd  
+	 */
 	Button deleteBtn; // The button that deletes the counter.
+	/**
+	 * @uml.property  name="counterBox"
+	 * @uml.associationEnd  
+	 */
 	EditText counterBox; // The box containing counter text.
 	
 	@Override

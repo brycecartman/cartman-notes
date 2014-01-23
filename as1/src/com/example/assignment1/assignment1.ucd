@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="assignment1" size="1445,1510" id="com.example.assignment1" metadata="uml2-1.0" initialized="true" scrolledX="902" scrolledY="46" tag="10" key="32303037303533312D31302041737369676E6D656E7431">
+  <children xsi:type="editmodel:ClassEditModel" name="StatsMain" location="50,1405" size="160,85" id="com.example.assignment1/StatsMain" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),onClick(Landroid.view.View;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,36">
+      <children xsi:type="editmodel:MethodEditModel" name="onClick" id="com.example.assignment1/StatsMain#onClick(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/StatsMain#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CounterActivity" location="1180,989" size="163,103" id="com.example.assignment1/CounterActivity" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),onOptionsItemSelected(Landroid.view.MenuItem;),onClick(Landroid.view.View;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="140,54">
+      <children xsi:type="editmodel:MethodEditModel" name="onClick" id="com.example.assignment1/CounterActivity#onClick(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/CounterActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onOptionsItemSelected" id="com.example.assignment1/CounterActivity#onOptionsItemSelected(Landroid.view.MenuItem;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/CounterActivity->com.example.assignment1/CounterFunctions*com.example.assignment1/CounterActivity-Soyatec::Access->com.example.assignment1/CounterFunctions" source="//@children.1" target="//@children.6" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Access»" size="50,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,51" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="232,374"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MonthlyStats" location="428,1240" size="160,67" id="com.example.assignment1/MonthlyStats" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,18">
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/MonthlyStats#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/MonthlyStats->com.example.assignment1/CounterFunctions" source="//@children.2" target="//@children.6" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="104,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,407"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="NewCounterActivity" location="112,960" size="166,103" id="com.example.assignment1/NewCounterActivity" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),onOptionsItemSelected(Landroid.view.MenuItem;),counter(Landroid.view.View;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="140,54">
+      <children xsi:type="editmodel:MethodEditModel" name="counter" id="com.example.assignment1/NewCounterActivity#counter(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/NewCounterActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onOptionsItemSelected" id="com.example.assignment1/NewCounterActivity#onOptionsItemSelected(Landroid.view.MenuItem;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/NewCounterActivity->com.example.assignment1/CounterFunctions*com.example.assignment1/NewCounterActivity-Soyatec::Access->com.example.assignment1/CounterFunctions" source="//@children.3" target="//@children.6" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Access»" size="50,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="166,51" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,345"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="HourlyStats" location="271,183" size="212,85" id="com.example.assignment1/HourlyStats" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),hourlyStatsText">
+    <children xsi:type="editmodel:CompartmentEditModel" size="189,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="hourlyStatsText" id="com.example.assignment1/HourlyStats#hourlyStatsText"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,18">
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/HourlyStats#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/HourlyStats->com.example.assignment1/CounterFunctions" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="131,85" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,46"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="WeeklyStats" location="671,50" size="211,85" id="com.example.assignment1/WeeklyStats" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),weeklyStatsText">
+    <children xsi:type="editmodel:CompartmentEditModel" size="188,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="weeklyStatsText" id="com.example.assignment1/WeeklyStats#weeklyStatsText"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,18">
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/WeeklyStats#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/WeeklyStats->com.example.assignment1/CounterFunctions" source="//@children.5" target="//@children.6" targetEnd="//@children.5/@sourceConnections.0/@children.2" label="//@children.5/@sourceConnections.0/@children.0" sourceEnd="//@children.5/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,85" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="121,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.7/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.8/@sourceConnections.0 //@children.2/@sourceConnections.0 //@children.3/@sourceConnections.0 //@children.10/@sourceConnections.0 //@children.9/@sourceConnections.0 //@children.5/@sourceConnections.0" name="CounterFunctions" location="655,666" size="232,499" id="com.example.assignment1/CounterFunctions" runTimeClassModel="getDate(),resetCounter(),hourlyStats(),getCount(),addCounter(Ljava.lang.String;),getDailyStats(),date,getCurrentName(),counters,getWeeklyStats(),restoreCounters(Landroid.content.Context;),deleteCounter(),setCounter(I),saveCounters(Landroid.content.Context;),getHourlyStats(),name,getMonthlyStats(),calendar,setName(Ljava.lang.String;),weeklyStats(),dailyStats(),sort(),name(),CounterFunctions(Ljava.lang.String;),getCounters(),incrementCounter(),monthlyStats()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="209,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="calendar" id="com.example.assignment1/CounterFunctions#calendar"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="counters" id="com.example.assignment1/CounterFunctions#counters"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="date" id="com.example.assignment1/CounterFunctions#date"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="com.example.assignment1/CounterFunctions#name"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,378">
+      <children xsi:type="editmodel:MethodEditModel" name="CounterFunctions" id="com.example.assignment1/CounterFunctions#CounterFunctions(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addCounter" id="com.example.assignment1/CounterFunctions#addCounter(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="dailyStats" id="com.example.assignment1/CounterFunctions#dailyStats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteCounter" id="com.example.assignment1/CounterFunctions#deleteCounter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCount" id="com.example.assignment1/CounterFunctions#getCount()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCounters" id="com.example.assignment1/CounterFunctions#getCounters()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCurrentName" id="com.example.assignment1/CounterFunctions#getCurrentName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDailyStats" id="com.example.assignment1/CounterFunctions#getDailyStats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHourlyStats" id="com.example.assignment1/CounterFunctions#getHourlyStats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMonthlyStats" id="com.example.assignment1/CounterFunctions#getMonthlyStats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWeeklyStats" id="com.example.assignment1/CounterFunctions#getWeeklyStats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hourlyStats" id="com.example.assignment1/CounterFunctions#hourlyStats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="incrementCounter" id="com.example.assignment1/CounterFunctions#incrementCounter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="monthlyStats" id="com.example.assignment1/CounterFunctions#monthlyStats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="name" id="com.example.assignment1/CounterFunctions#name()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="resetCounter" id="com.example.assignment1/CounterFunctions#resetCounter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="restoreCounters" id="com.example.assignment1/CounterFunctions#restoreCounters(Landroid.content.Context;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="saveCounters" id="com.example.assignment1/CounterFunctions#saveCounters(Landroid.content.Context;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCounter" id="com.example.assignment1/CounterFunctions#setCounter(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sort" id="com.example.assignment1/CounterFunctions#sort()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="weeklyStats" id="com.example.assignment1/CounterFunctions#weeklyStats()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DailyStats" location="50,543" size="198,85" id="com.example.assignment1/DailyStats" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),dailyStatsText">
+    <children xsi:type="editmodel:CompartmentEditModel" size="175,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="dailyStatsText" id="com.example.assignment1/DailyStats#dailyStatsText"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,18">
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/DailyStats#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/DailyStats->com.example.assignment1/CounterFunctions" source="//@children.7" target="//@children.6" targetEnd="//@children.7/@sourceConnections.0/@children.2" label="//@children.7/@sourceConnections.0/@children.0" sourceEnd="//@children.7/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="180,85" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,187"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MainActivity" location="850,1252" size="160,103" id="com.example.assignment1/MainActivity" runTimeClassModel="newCounter(Landroid.view.View;),onCreateOptionsMenu(Landroid.view.Menu;),viewCounters(Landroid.view.View;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,54">
+      <children xsi:type="editmodel:MethodEditModel" name="newCounter" id="com.example.assignment1/MainActivity#newCounter(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/MainActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="viewCounters" id="com.example.assignment1/MainActivity#viewCounters(Landroid.view.View;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/MainActivity->com.example.assignment1/CounterFunctions" source="//@children.8" target="//@children.6" targetEnd="//@children.8/@sourceConnections.0/@children.2" label="//@children.8/@sourceConnections.0/@children.0" sourceEnd="//@children.8/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="18,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="213,499"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ViewCountersActivity" location="1064,205" size="176,103" id="com.example.assignment1/ViewCountersActivity" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),onOptionsItemSelected(Landroid.view.MenuItem;),onClick(Landroid.view.View;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="140,54">
+      <children xsi:type="editmodel:MethodEditModel" name="onClick" id="com.example.assignment1/ViewCountersActivity#onClick(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/ViewCountersActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onOptionsItemSelected" id="com.example.assignment1/ViewCountersActivity#onOptionsItemSelected(Landroid.view.MenuItem;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/ViewCountersActivity->com.example.assignment1/CounterFunctions*com.example.assignment1/ViewCountersActivity-Soyatec::Access->com.example.assignment1/CounterFunctions" source="//@children.9" target="//@children.6" targetEnd="//@children.9/@sourceConnections.0/@children.2" label="//@children.9/@sourceConnections.0/@children.0" sourceEnd="//@children.9/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Access»" size="50,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,103" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="232,48"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="RenameActivity" location="1265,576" size="160,85" id="com.example.assignment1/RenameActivity" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),rename(Landroid.view.View;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,36">
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.example.assignment1/RenameActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rename" id="com.example.assignment1/RenameActivity#rename(Landroid.view.View;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.example.assignment1/RenameActivity->com.example.assignment1/CounterFunctions" source="//@children.10" target="//@children.6" targetEnd="//@children.10/@sourceConnections.0/@children.2" label="//@children.10/@sourceConnections.0/@children.0" sourceEnd="//@children.10/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,83" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="232,189"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:NotepadEditModel" location="272,141" size="163,24" fontInfo="Arial-8-0" note="Displays the hourly statistics"/>
+  <children xsi:type="editmodel:NotepadEditModel" location="670,27" size="171,24" fontInfo="Arial-8-0" note="Displays the weekly statistics."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="1060,165" size="361,24" fontInfo="Arial-8-0" note="Views a scrollable list of counters from largest total count to smallest."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="1262,546" size="121,24" fontInfo="Arial-8-0" note="Renames a counter."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="655,571" size="441,70" fontInfo="Arial-8-0" note="The brain of the program. This controlls all the counter functions including add,&#xD;&#xA;remove, statistics generating, getters/setters and more. Everything is tied to this class."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="849,1215" size="371,24" fontInfo="Arial-8-0" note="The starting activity. Contains new Counter and View Counters buttons."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="425,1209" size="173,24" fontInfo="Arial-8-0" note="Displays the monthly statistics."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="109,928" size="342,24" fontInfo="Arial-8-0" note="Creates a new counter with a given name from the input text box."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="1177,955" size="416,38" fontInfo="Arial-8-0" note="The actual counter which loads data from CounterFunctions and has the ability to&#xD;&#xA;rename, delete, reset, increment, view stats and go to the home activity."/>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="All" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

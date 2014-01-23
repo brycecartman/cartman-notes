@@ -14,6 +14,9 @@ import android.widget.TextView;
 public class WeeklyStats extends Activity {
 	
 	// Array of 5 weekly statistics.
+	/**
+	 * @uml.property  name="weeklyStatsText" multiplicity="(0 -1)" dimension="2"
+	 */
 	TextView[][] weeklyStatsText = new TextView[5][12];
 		
 	
