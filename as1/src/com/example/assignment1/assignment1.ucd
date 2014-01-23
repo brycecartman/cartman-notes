@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="assignment1" size="1445,1510" id="com.example.assignment1" metadata="uml2-1.0" initialized="true" scrolledX="902" scrolledY="46" tag="10" key="32303037303533312D31302041737369676E6D656E7431">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="assignment1" size="1445,1510" id="com.example.assignment1" metadata="uml2-1.0" initialized="true" scrolledY="893" tag="10" key="32303037303533312D31302041737369676E6D656E7431">
   <children xsi:type="editmodel:ClassEditModel" name="StatsMain" location="50,1405" size="160,85" id="com.example.assignment1/StatsMain" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),onClick(Landroid.view.View;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="137,36">
@@ -183,6 +183,7 @@
   <children xsi:type="editmodel:NotepadEditModel" location="425,1209" size="173,24" fontInfo="Arial-8-0" note="Displays the monthly statistics."/>
   <children xsi:type="editmodel:NotepadEditModel" location="109,928" size="342,24" fontInfo="Arial-8-0" note="Creates a new counter with a given name from the input text box."/>
   <children xsi:type="editmodel:NotepadEditModel" location="1177,955" size="416,38" fontInfo="Arial-8-0" note="The actual counter which loads data from CounterFunctions and has the ability to&#xD;&#xA;rename, delete, reset, increment, view stats and go to the home activity."/>
+  <children xsi:type="editmodel:NotepadEditModel" location="50,1365" size="123,24" fontInfo="Arial-8-0" note="Main statistics page."/>
   <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="All" properties="wireOptions=1;Product=eUML2"/>
   <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
     <leftRuler/>
