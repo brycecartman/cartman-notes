@@ -41,6 +41,11 @@ Credits/Acknowledgements:
   In-Class Assistance:
   
     Hodgson, James: Helped me with the ArrayList when I had brief problems
+
+  Program Resources:
+
+   Eclipse
+   eUML2 - Studio Version (Evaluation)
     
 Program Description:
 
